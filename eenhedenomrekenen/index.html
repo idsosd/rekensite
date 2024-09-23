@@ -42,7 +42,7 @@
                         <h4>Eenheden omreken oefenapp</h4>
                     </div>
                     <div class="card-body">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" id="dimselect">
                             <option selected>Maak een keuze...</option>
                             <option value="1">1D</option>
                             <option value="2">2D</option>
@@ -52,23 +52,21 @@
                         <div class="row mt-2">
                             <div class="col-4">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2">
-                                    <span class="input-group-text" id="basic-addon2">m</span>
+                                    <input type="text" class="form-control" id="opginput">
+                                    <span class="input-group-text" id="opgeenheid">m</span>
                                 </div>
                             </div>
                             <div class="col-1">=</div>
                             <div class="col-7">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2">
-                                    <span class="input-group-text" id="basic-addon2">cm</span>
+                                    <input type="text" class="form-control" id="antwinput">
+                                    <span class="input-group-text" id="antweenheid">cm</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col d-grid"><a href="#" class="btn btn-success">Check</a></div>
-                            <div class="col d-grid"><a href="#" class="btn btn-primary">Nieuw</a></div>
+                            <div class="col-6 d-grid"><button class="btn btn-success" onclick="hallo('Ids')">Check</button></div>
+                            <div class="col-6 d-grid"><button class="btn btn-primary" onclick="helloworld()">Nieuw</button></div>
                         </div>
 
                         
@@ -85,6 +83,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="eenheden.js"></script>
 </body>
 
 </html>
