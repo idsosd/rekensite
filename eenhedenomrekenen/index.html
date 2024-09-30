@@ -35,24 +35,24 @@
             </div>
         </nav>
         <div class="row mt-5">
-            <div class="col"></div>
-            <div class="col">
+            <div class="col-3"></div>
+            <div class="col-6">
                 <div class="card text-center">
                     <div class="card-header">
                         <h4>Eenheden omreken oefenapp</h4>
                     </div>
                     <div class="card-body">
-                        <select class="form-select" id="dimselect">
-                            <option value="0">Maak een keuze...</option>
-                            <option value="1">1D</option>
-                            <option value="2">2D</option>
-                            <option value="3">3D</option>
+                        <select class="form-select" id="dimselect" onchange="nieuw()">
+                            <!-- <option value="0">Maak een keuze...</option> -->
+                            <option value="1">1D (lengte)</option>
+                            <option value="2">2D (oppervlakte)</option>
+                            <option value="3">3D (inhoud)</option>
                         </select>
 
                         <div class="row mt-2">
                             <div class="col-4">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" id="opginput">
+                                    <input type="text" class="form-control" id="opginput" disabled>
                                     <span class="input-group-text" id="opgeenheid">m</span>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col"></div>
+            <div class="col-3"></div>
         </div>
 
     </div>
