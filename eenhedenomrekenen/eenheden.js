@@ -7,6 +7,8 @@ let opgeenheid = document.getElementById("opgeenheid");
 let antwoord = document.getElementById("antwinput");
 let antweenheid = document.getElementById("antweenheid");
 
+let berekendeantw;
+
 function nieuw() {
     antwoord.value = "";
     let dimvalue = dimensie.value;
@@ -34,7 +36,7 @@ function nieuw() {
     verschil = Math.abs(randomnmbr - randomnmbr2)
     let factortotaal = Math.pow(factor, verschil);
     console.log("factortotaal = " + factortotaal);
-    let berekendeantw;
+    
     if(randomnmbr < randomnmbr2) {
         berekendeantw = opgdec / factortotaal;
     } else {
@@ -44,6 +46,9 @@ function nieuw() {
 }
 
 function check() {
-    alert("Hallo " + naam);
+    if(berekendeantw == antwoord.value)
+        alert("GOED!")
+    else
+        alert("FOUT!")
 }
 
