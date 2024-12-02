@@ -45,14 +45,17 @@ function nieuw() {
 
 function check() {
     //nodig: opgave.value, die moet naar hist.innerHTML
-    hist.innerHTML += opgave.value;
-    hist.innerHTML += " " + opgeenheid.innerText; //hier moet opgeenheid komen
-    hist.innerHTML += " = ";
-    hist.innerHTML += antwoord.value;
-    hist.innerHTML += " " + antweenheid.innerText; //hier moet antweenheid komen
+    let hele_opg_antw = opgave.value + " " + opgeenheid.innerHTML + " = " + 
+                        antwoord.value + " " + antweenheid.innerHTML
+    // hist.innerHTML += opgave.value;
+    // hist.innerHTML += " " + opgeenheid.innerHTML; //hier moet opgeenheid komen
+    // hist.innerHTML += " = ";
+    // hist.innerHTML += antwoord.value;
+    // hist.innerHTML += " " + antweenheid.innerHTML; //hier moet antweenheid komen
     if(berekendeantw.equals(antwoord.value))
-        hist.innerHTML += " GOED<br>";
+        hist.innerHTML += "<p class='bg-success text-white p-2 rounded-2'>" + hele_opg_antw + "</p>";
     else
-        hist.innerHTML += " FOUT<br>";
+        hist.innerHTML += "<p class='bg-danger text-white p-2'>" + hele_opg_antw + "</p>";
+    nieuw();
 }
 
